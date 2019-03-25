@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="4"
+    android:orientation="vertical">
+
+
+    //TRIP+EDIT + EDIT VIEW
+    //DESTINATION + EDIT VIEW
+    //TRIP TYPE RADIO GROUP
+    //SEEK BAR
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="Trip Name"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:text="Destination"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        //Trip type
+
+        <TextView
+            android:text="Trip Type"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/trip_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            //City break
+            <RadioButton
+                android:id="@+id/cityBreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_break"
+                android:layout_weight="1"
+                />
+
+            <RadioButton
+                android:id="@+id/seaSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sea_side"
+                android:layout_weight="1"
+                />
+
+            <RadioButton
+                android:id="@+id/mountains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mountains"
+                android:layout_weight="1"
+                />
+        </RadioGroup>
+
+        //Price - euro
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price (eur)"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:min="20"
+            android:max="120"
+            android:progress="20"/>
+
+    </LinearLayout>
+
+    //START TEXT+END TEXT
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Start Date"
+            android:gravity="center_horizontal"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Date"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    //START BUTTON END BUTTON
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonStartDate"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:hint="DD/MM/YYYY"
+            android:background="#f1b431"
+            android:textSize="20dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonEndDate"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#f1b431"
+
+            android:hint="DD/MM/YYYY"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+
+
+    //Salvare Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_bar"
+            android:progress="1"
+            android:max="5"
+            android:min="1"
+            />
+
+         <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#f1b431"
+                 android:textColor="#FFFFFF"
+                 android:layout_margin="10dp"
+                android:text="Save"/>
+    </LinearLayout>
+
+
+</LinearLayout>
